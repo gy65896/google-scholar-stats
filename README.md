@@ -1,7 +1,7 @@
 # Google Scholar Statistics
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-%2320beff?color=1f1f18&logo=google-scholar&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
-[![Citations](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gy65896/google-scholar-stats/main/.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
+[![Citations](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gy65896/google-scholar-stats/main/badge-citations.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
 [![H-index](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gy65896/google-scholar-stats/main/badge-i10index.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
 
 这个仓库使用GitHub Actions自动从Google Scholar获取引用统计数据，每天更新一次。
