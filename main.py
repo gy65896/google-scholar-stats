@@ -42,7 +42,7 @@ def create_badge_file(label, message, color, filename):
         json.dump(data, f)
 
 # 替换为你的Google Scholar ID
-scholar_id = "yggQMJMAAAAJ"
+scholar_id = "5qAe9ZMAAAAJ"
 stats = get_scholar_stats(scholar_id)
 
 if stats:
