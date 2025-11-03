@@ -1,8 +1,8 @@
 # Google Scholar Statistics
 
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-%2320beff?color=1f1f18&logo=google-scholar&style=flat-square)](https://scholar.google.com/citations?hl=en&user=yggQMJMAAAAJ)
-[![Citations](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/fangzr/google-scholar-stats/main/badge-citations.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=yggQMJMAAAAJ)
-[![H-index](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/fangzr/google-scholar-stats/main/badge-i10index.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=yggQMJMAAAAJ)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-%2320beff?color=1f1f18&logo=google-scholar&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
+[![Citations](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/fangzr/google-scholar-stats/main/badge-citations.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
+[![H-index](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/fangzr/google-scholar-stats/main/badge-i10index.json&style=flat-square)](https://scholar.google.com/citations?hl=en&user=5qAe9ZMAAAAJ)
 
 这个仓库使用GitHub Actions自动从Google Scholar获取引用统计数据，每天更新一次。
 
@@ -11,7 +11,7 @@
 1. Fork这个仓库
 2. 修改`get_stats.py`中的Google Scholar ID
 3. 确保GitHub Actions有写权限（在仓库设置中）
-4. 更新README.md中的徽章URL，将`fangzr`替换为你的GitHub用户名
+4. 更新README.md中的徽章URL，将`yuguo`替换为你的GitHub用户名
 
 ## 技术细节
 
