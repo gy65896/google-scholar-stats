@@ -202,7 +202,6 @@ def create_combined_badge(citations, filename):
 
 def main():
     # 缓存URL和Scholar ID配置
-    cache_url = "https://zhengrufang.com/google/badge-scholar-citations.json"
     scholar_id = "5qAe9ZMAAAAJ" 
     badge_style = "flat-square"
     badge_color = "1f1f18"
