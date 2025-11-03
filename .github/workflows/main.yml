@@ -1,0 +1,47 @@
+name: Update Scholar Stats  # Workflow 的名称
+
+on:
+  # 1. 定时触发：每天UTC时间凌晨5点运行（北京时间13点）
+  schedule:
+    - cron: '0 5 * * *'
+  # 2. 手动触发：允许在 GitHub 页面上手动点击运行
+  workflow_dispatch:
+  # 3. 推送触发：当 main 分支有代码推送时也运行（可选，用于测试）
+  push:
+    branches: [ main ]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest  # 在最新的 Ubuntu 系统上运行
+
+    steps:
+      # 步骤1：检出仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # 使用GITHUB_TOKEN才有权限推送代码
+          fetch-depth: 0  # 获取所有历史记录
+
+      # 步骤2：设置 Python 环境
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # 指定Python版本，与你本地一致
+
+      # 步骤3：安装依赖
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      # 步骤4：运行 Python 脚本抓取数据
+      - name: Run scholar script
+        run: |
+          python scripts/main.py
+
+      # 步骤5：检查文件是否有变动，如果有则提交
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git.config --local user.name "GitHub Action"
+          git add data/scholar_stats.json  # 只添加数据文件
+          git diff --staged --quiet || (git commit -m "🤖 Auto-update scholar stats [skip ci]" && git push)
